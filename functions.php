@@ -24,8 +24,8 @@ function pagination_nav() {
 		<div class="row" id="pagination-row">
 			<nav role="navigation">
 				<div class="standard-bottom-border" id="pagination-wrapper">
-					<div class="nav-next col-sm-6"><?php previous_posts_link( ' &larr; Newer posts' ); ?></div>
-					<div class="nav-previous col-sm-6"><div class="pull-right"><?php next_posts_link( 'Older posts &rarr;' ); ?></div></div>
+					<div class="nav-next col-sm-6"><?php previous_posts_link( ' &larr; Newer' ); ?></div>
+					<div class="nav-previous col-sm-6"><div class="pull-right"><?php next_posts_link( 'Older &rarr;' ); ?></div></div>
 				</div>
 			</nav>
 		</div>

@@ -2,8 +2,9 @@
 	<?php if (is_category()): ?>
 		<p class="category-header standard-bottom-border">Articles I've written for 
 			<?php 
-				$category = get_the_category(); 
-				echo $category[0]->cat_name;
+				$category = get_the_category();
+				$category_name = $category[0]->cat_name;
+				echo $category_name;
 			?>:
 		</p> 
 	<?php endif; ?>	
@@ -15,22 +16,36 @@
 					<h4 class="post-category">
 						<?php
 							the_category(' / ');
-							echo " | ";
-							the_date();
+							echo " | " . get_the_date();
 						?>
 					</h4>
 				<?php endif; ?>
-				<h1><?php the_title(); ?></h1>
-				<?php the_content(); ?>
-				<p>
-					<em>
-						<?php 
-							echo get_post_meta( get_queried_object_id(), "Publication URL", true ); 
-							echo "|||||||||||";
-						?>
-						<a href="<?php echo get_post_meta( get_queried_object_id(), "Publication URL", true ); ?>" target="_blank">Read more</a><?php edit_post_link('Edit this entry', ' &bull; '); ?>
-					</em>
-				</p>
+				<h1>
+					<?php if (is_home() || is_single()): ?>
+						<a href="<?php echo get_post_meta( get_the_ID(), 'Publication URL', true ); ?>" target="_blank">
+							<?php the_title();?>
+						</a>
+					<?php else:
+						the_title();
+					endif; ?>
+				</h1>
+				<?php the_content();
+				if ( !is_page() ): ?>
+					<?php $publication_url = get_post_meta( get_the_ID(), 'Publication URL', true ); 
+						if ($publication_url):?>
+							<p>
+								<em>
+									<a href="<?php echo $publication_url; ?>" target="_blank">Read more on
+									<?php //This is the same code as we use to get the category name without the link on the category pages. It probably shouldn't be but mehh.
+										$category = get_the_category();
+										$category_name = $category[0]->cat_name;
+										echo " " . $category_name; 
+									?>'s website.</a>
+								</em>
+							</p>
+						<?php endif;
+				endif; ?>
+				<p><em><?php edit_post_link(); ?></em></p>
 			</div>
 			<?php // End the loop.
 		endwhile;
