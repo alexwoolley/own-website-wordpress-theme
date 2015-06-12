@@ -1,0 +1,154 @@
+/*
+Theme Name: Own Website
+Version: 1
+*/
+
+/*FONTS, LINE HEIGHTS ETC*/
+p, li {
+	font-family: 'Merriweather', serif;
+}
+
+p, li {
+	line-height: 190%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Merriweather Sans', sans-serif;
+}
+/*END FONTS*/
+
+/*LINKS*/
+a {
+	border-bottom: dotted #BF0000 1px;
+}
+/* unvisited link */
+a:link {
+    color: #BF0000;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #BF0000;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #7F0000;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #7F0000;
+    text-decoration: none;
+}
+/*special links*/
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
+	color: #333;
+	border-bottom: none;
+	text-decoration: none;
+}
+.nav a:link, .nav a:visited, .nav a:hover, .nav a:active {
+	border-bottom: none;
+	text-decoration: none;
+}
+/*END LINKS*/
+
+/*HEADER MENU*/
+.collapse {
+	padding-left: 0;
+}
+
+.nav>li>a {
+	padding-left: 0;
+	padding-right: 30px;
+}
+/*END HEADER MENU*/
+
+/*MASTHEAD*/
+#masthead {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 3.5em;
+	margin-bottom: 0;
+}
+
+#masthead-row {
+	margin-bottom: 40px;
+}
+/*END MASTHEAD*/
+
+/*SIDEBAR*/
+#sidebar li {
+	list-style-type: none;
+}
+
+#sidebar .widgettitle {
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+
+#sidebar ul {
+	padding-left: 0;
+}
+.widgettitle {
+	margin-top: 0;
+}
+.widget {
+	margin-bottom: 30px;
+}
+/*END SIDEBAR*/
+
+/*POSTS*/
+.post {
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+}
+
+.post h1 {
+	margin-bottom: 20px;
+}
+
+.post-category {
+	margin-top: 0;
+}
+/*END POSTS*/
+
+/*STANDARD BOTTOM BORDER*/
+.standard-bottom-border {
+	border-bottom: solid #e7e7e7 1px;
+}
+
+/*CATEGORY HEADER*/
+.category-header {
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+}
+
+/*PAGINATION*/
+.pagination {
+	display: block;
+	margin-top: 0;
+}
+#pagination-row {
+	padding-bottom: 30px;
+}
+#pagination-wrapper {
+	padding-bottom: 50px;
+	margin: 0 15px;
+}
+.nav-previous {
+	padding-right: 0;
+}
+.nav-next {
+	padding-left: 0;
+}
+/*END PAGINATION*/
+
+/*FOOTER*/
+footer {
+	margin-top: 15px;
+}
+/*END FOOTER
