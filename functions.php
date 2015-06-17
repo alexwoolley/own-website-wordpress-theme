@@ -31,4 +31,6 @@ function pagination_nav() {
 		</div>
 	<?php  endif;
 }
+//Strip paragraph tags from category description.
+remove_filter('term_description','wpautop');
 ?>
